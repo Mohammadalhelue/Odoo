@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_smart_consumption_tree" model="ir.ui.view">
+        <field name="name">smart.consumption.tree</field>
+        <field name="model">smart.consumption</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="employee_id"/>
+                <field name="product_id"/>
+                <field name="quantity"/>
+                <field name="total_cost"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_smart_consumption" model="ir.actions.act_window">
+        <field name="name">IoT Consumptions</field>
+        <field name="res_model">smart.consumption</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_smart_integrator_root" name="Smart Integrator" sequence="10"/>
+    <menuitem id="menu_smart_consumption" name="Consumptions" parent="menu_smart_integrator_root" action="action_smart_consumption" sequence="10"/>
+</odoo>

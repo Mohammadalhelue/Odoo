@@ -1,0 +1,27 @@
+# Python bytecode & cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+
+# Database files & Docker persistent volumes
+pgdata/
+*.db
+*.sqlite3
+*.dump
+
+# Local Environment & Secrets
+.env
+*.pem
+*.key
+
+# IDE settings (PyCharm / VSCode)
+.idea/
+.vscode/
+*.swp
+
+# OS generated files
+.DS_Store
+Thumbs.db
